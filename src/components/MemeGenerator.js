@@ -11,8 +11,11 @@ const MemeGenerator = () => {
 
   const generator = (e) => {
     e.preventDefault()
+    
+    const randomNb = Math.floor(Math.random() * memeData.length)
+    const randomMemeImg = memeData[randomNb].url
+    setMeme({ ...meme, img: randomMemeImg })
 
-    console.log('666')
   }
 
   const fetchData = () => {
